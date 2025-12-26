@@ -1,7 +1,20 @@
 import pyttsx3
-import os
 
-engine = pyttsx3.init('')
 
-engine.say('This is going to the most intersting journey.')
-engine.runAndWait()
+#  Program initiation
+engine = pyttsx3.init()
+
+
+rate = engine.getProperty('rate')
+
+engine.setProperty('rate', 200)  # setting up new voice rate
+
+# pyttsx3.speak("At the speed of 200")
+print (rate)
+
+
+volume = engine.getProperty('volume')
+print (volume)
+
+engine.setProperty('volume', 0.8)
+
